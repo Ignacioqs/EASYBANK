@@ -17,7 +17,6 @@ li {
 a {
   text-decoration: none;
   color: hsl(233, 8%, 62%);
-  padding: 0 10px;
 }
 
 h1,
@@ -50,9 +49,28 @@ button {
   letter-spacing: 1px;
 }
 
-#navId ul,
 #navId button {
   display: none;
+}
+
+.navClass {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  border-radius: 10px;
+  flex-direction: column;
+  display: none;
+}
+
+.navClass a {
+  padding: 20px 0;
+  display: block;
+  margin: 0 10px;
+}
+
+.showMenu {
+  display: flex;
+  background-color: #fff;
 }
 
 #navId {
@@ -109,12 +127,60 @@ button {
   padding: 20px 50px;
 }
 
+.whyChoose {
+  background-color: hsl(0, 0%, 98%);
+  padding: 100px 0;
+}
+
+#info h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.whyChoose h3 {
+  margin: 20px 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.whyChoose section {
+  margin: 70px 0 20px;
+}
+
+.WC {
+  background-color: hsl(0, 0%, 98%);
+}
+
+#info {
+  padding-top: 100px;
+}
+
+.articles {
+  padding: 100px 0;
+}
+
+.articles img {
+  width: 100%;
+}
+
 /* //////////////////////////////////////////////////////////////////////////// */
 
 @media (min-width: 1000px) {
-  #navId ul,
+  .navClass,
   #navId button {
     display: flex;
+  }
+
+  .navClass {
+    top: 0;
+    position: static;
+    width: auto;
+    flex-direction: row;
+  }
+
+  #navId .container {
+    justify-content: space-between;
   }
 
   #hamburgerIcon {
@@ -157,5 +223,32 @@ button {
   .heroText button {
     font-size: 1rem;
     padding: 12px 30px;
+  }
+
+  .whyChoose .container {
+    display: flex;
+    text-align: left;
+  }
+
+  .whyChoose {
+    padding: 0;
+  }
+
+  .whyChoose section p {
+    font-size: 1rem;
+  }
+
+  .whyChoose section {
+    margin: 70px 20px;
+  }
+
+  .whyChoose section:first-child {
+    margin-left: 0;
+  }
+
+  #info {
+    text-align: left;
+    width: 50%;
+    padding-top: 70px;
   }
 }
