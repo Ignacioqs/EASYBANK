@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(233, 8%, 62%);
+  padding: 0 10px;
+}
+
+h1,
+h2,
+h3 {
+  color: hsl(233, 26%, 24%);
+}
+
+p {
+  color: hsl(233, 8%, 62%);
+  line-height: 2rem;
+  font-size: 18px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    90deg,
+    hsl(136, 65%, 51%),
+    hsl(233, 8%, 62%)
+  );
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#navId ul,
+#navId button {
+  display: none;
+}
+
+#navId {
+  background-color: #fff;
+}
+
+#navId .container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  height: 25px;
+}
+
+#hamburgerIcon {
+  width: 35px;
+}
+
+.heroImg {
+  background-image: url("images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: -2;
+  top: -50px;
+}
+
+.hero img {
+  width: 100%;
+  position: relative;
+  top: -127px;
+}
+
+.heroText {
+  margin-bottom: 100px;
+}
+
+.heroText h1 {
+  font-size: 3.3rem;
+  font-weight: 300;
+  margin: -120px 0 20px;
+}
+
+.heroText p {
+  margin-bottom: 40px;
+}
+
+.heroText button {
+  font-size: 1.3rem;
+  padding: 20px 50px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
+@media (min-width: 1000px) {
+  #navId ul,
+  #navId button {
+    display: flex;
+  }
+
+  #hamburgerIcon {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .heroImg {
+    margin: 0 auto;
+    background-image: url("images/bg-intro-desktop.svg");
+    top: -220px;
+    background-size: 150%;
+  }
+
+  .hero img {
+    width: 100%;
+    top: 100px;
+    right: -130px;
+  }
+
+  .heroText {
+    order: -1;
+    margin-bottom: 100px;
+    align-self: center;
+    width: 500px;
+    text-align: left;
+    margin-left: 10%;
+  }
+
+  .heroText .container {
+    width: 100%;
+  }
+  .heroText h1 {
+    font-size: 2.8rem;
+  }
+  .heroText button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
